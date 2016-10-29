@@ -13,8 +13,12 @@
 ?>
 				<span href="#collapse_cat_<?=$id?>" class="panel-arrow <?=($lCatOpen) ? '' : 'collapsed'?>" data-toggle="collapse" data-parent="#catalog-accordion" aria-expanded="false" aria-controls="collapse_cat_<?=$id?>">
 					<?= $this->element('icon', array('type' => 'angle-right')) ?>
-					<?= $this->element('icon', array('type' => 'angle-down')) ?>
+					<?=$this->element('icon', array('type' => 'angle-down')) ?>
 				</span>
+<?
+		} else {
+?>
+				<span class="panel-arrow collapsed" style="opacity: 0.5"><?=$this->element('icon', array('type' => 'angle-right'))?></span>
 <?
 		}
 ?>
